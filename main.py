@@ -15,23 +15,6 @@ import plotly.express as px
 # Set the title
 st.title('My Machine Learning Application!')
 
-# Include sidebar with credentials
-with st. sidebar:
-            st.markdown('My ML App (V 0.1)')
-            st.markdown(""" 
-                        #### Let's connect:
-                        [Kamran Feroz](https://www.linkedin.com/in/kamranferoz/)
-            
-                        #### Powered by:
-                        [OpenAI](https://openai.com/)
-                        [Langchain](https://github.com/hwchase17/langchain)\n
-            
-                        #### Source code:
-                        [YouTube Sum/Trans!](https://github.com/kamranferoz/myML)
-                        """)
-            st.markdown(
-                "<style>#MainMenu{visibility:hidden;}</style>",
-                unsafe_allow_html=True)
     
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 
@@ -119,7 +102,26 @@ if uploaded_file:
 
             all_metrics[model_name] = metrics
     
-        
+
+            # Include sidebar with credentials
+            with st. sidebar:
+                        st.markdown('My ML App (V 0.1)')
+                        st.markdown(""" 
+                                    #### Let's connect:
+                                    [Kamran Feroz](https://www.linkedin.com/in/kamranferoz/)
+                        
+                                    #### Powered by:
+                                    [OpenAI](https://openai.com/)
+                                    [Langchain](https://github.com/hwchase17/langchain)\n
+                        
+                                    #### Source code:
+                                    [YouTube Sum/Trans!](https://github.com/kamranferoz/myML)
+                                    """)
+                        st.markdown(
+                            "<style>#MainMenu{visibility:hidden;}</style>",
+                            unsafe_allow_html=True)
+            
+                
         
         best_model = max(all_metrics, key=lambda k: all_metrics[k].get('R2 Score', 0) or all_metrics[k].get('Accuracy', 0))
         st.write(f"Best Model: {best_model}")
