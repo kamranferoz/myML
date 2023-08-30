@@ -28,7 +28,7 @@ with st. sidebar:
                         [Langchain](https://github.com/hwchase17/langchain)\n
             
                         #### Source code:
-                        [YouTube Sum/Trans!](https://github.com/kamranferoz/myML)
+                        [My ML App!](https://github.com/kamranferoz/myML)
                         """)
             st.markdown(
                 "<style>#MainMenu{visibility:hidden;}</style>",
