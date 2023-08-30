@@ -13,7 +13,25 @@ import xgboost as xgb
 import plotly.express as px
 
 # Set the title
-st.title('My ML App')
+st.title('My Machine Learning Application!')
+
+# Include sidebar with credentials
+with st.sidebar:
+    st.markdown('My ML App (V 0.1)')
+    st.markdown(""" 
+                #### Let's connect:
+                [Kamran Feroz](https://www.linkedin.com/in/kamranferoz/)
+
+                #### Powered by:
+                [OpenAI](https://openai.com/)
+                [Langchain](https://github.com/hwchase17/langchain)\n
+
+                #### Source code:
+                [YouTube Sum/Trans!](https://github.com/kamranferoz/myML)
+                """)
+st.markdown(
+    "<style>#MainMenu{visibility:hidden;}</style>",
+    unsafe_allow_html=True)
 
 uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
 
