@@ -1,0 +1,5 @@
+streamlit==1.25.0
+pandas==2.0.3
+sklearn==0.0.post7
+xgboost==1.7.6
+plotly==5.16.0
