@@ -57,9 +57,9 @@ if uploaded_file:
                 #### Source code:
                 [YouTube Sum/Trans!](https://github.com/kamranferoz/myML)
                 """)
-st.markdown(
-    "<style>#MainMenu{visibility:hidden;}</style>",
-    unsafe_allow_html=True)
+    st.markdown(
+        "<style>#MainMenu{visibility:hidden;}</style>",
+        unsafe_allow_html=True)
 
 
 
